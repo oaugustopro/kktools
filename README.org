@@ -3,8 +3,7 @@
 
 A suite of cybersecurity applications to accelerate and automate processes. Some tools have more educational purposes other than increasing productivity. All tools were written by the author of this repository, dependencies have been minimized to make it easier to use.
 
-# kktools
-A suite of cybersecurity applications to accelerate and automate processes. Some tools have more educational purposes other than increasing productivity.
+Most of the scripts are fully functional but they lack documentation and some of them needs TLC. Collaborators are welcome.
 
 ** Shell Scripts
 Each shell script is a standalone application. They are all written in bash and are compatible with Linux and Mac OS. They are all tested on Kali Linux.
@@ -108,3 +107,9 @@ Contain didatical steps to proceed with a buffer overflow attack. It is useful t
 Generate a pattern to find the offset of a buffer overflow (not exautively tested).
 
 ** Batch Scripts
+
+*** KKPeas
+Like KKPeas Powershell but for cmd only.
+
+*** KKSecurity
+Useful to disable security like windows defender and firewal using cmd only.

@@ -17,11 +17,10 @@
 # END TODO
 
 ## Import Libs
-source default.conf || { echo "Error while loading source files"; exit 1; }
+# source default.conf || { echo "Error while loading source files"; exit 1; }
 # Colocar no inicio do libkmrgobash algo para bypassar as dependencias, tiipo o lolcat
 source libkmrgobash.sh || { echo "Error while loading source files"; exit 1; }
 this=$(basename $0)
-
 ### Arguments
 ### Help variables
 help_short_description="Enumerate computers and services"
@@ -1052,6 +1051,8 @@ elif [ -n "$host" ] && [ -n "$port" ]; then
 elif [ -n "$netadd" ] && [ -z "$host" ] && [ -z "$port" ]; then
     scanNetwork "$netadd"
 fi
+
+
 
 # sl -e -a
 # curl parrot.live
