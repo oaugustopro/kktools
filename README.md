@@ -1,2 +1,2 @@
 # kktools
-A suite of cybersecurity applications to accelerate and automate processes. Some tools have more educational purposes than for increasing productivity.
+A suite of cybersecurity applications to accelerate and automate processes. Some tools have more educational purposes other than increasing productivity.
