@@ -5,6 +5,8 @@ A suite of cybersecurity applications to accelerate and automate processes. Some
 
 Most of the scripts are fully functional but they lack documentation and some of them needs TLC. Collaborators are welcome.
 
+Those tools were used in Cyber Security classes in Brazilian Army courses.
+
 ** Installation
 There is no installation, just clone the repository and run the scripts. Some scripts have dependencies, but they are all easy to install, if you are using Kali most of them are already available in the system.
 
