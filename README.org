@@ -119,7 +119,7 @@ Change Header Flags of an PE (Portable Executable) file. It can be used to chang
 kkpeheader.py tftpd32.exe .data
 #+end_src
 
-#+RESULTS:
+#+begin_verbatim
 | Before                            | modification: |         |        |                      |
 | Flags                             | for           | section | .data: |                      |
 | IMAGE_SCN_MEM_EXECUTE:            | Not           | Set     |        |                      |
@@ -139,6 +139,7 @@ kkpeheader.py tftpd32.exe .data
 | IMAGE_SCN_CNT_UNINITIALIZED_DATA: | Set           |         |        |                      |
 |                                   |               |         |        |                      |
 | Modified                          | binary        | saved   | as:    | modified_tftpd32.exe 
+#+end_verbatim
 
 *** [[README-kkpeprotections.org][KKPEProtections]]
 Check the protection on PE files. It can be used to check if the file is packed, obfuscated, or protected.
@@ -147,12 +148,13 @@ Check the protection on PE files. It can be used to check if the file is packed,
 kkpeprotections.py tftpd32.exe
 #+end_src
 
-#+RESULTS:
+#+begin_verbatim
 | ASLR:           | No  |
 | SafeSEH:        | Yes |
 | CFG:            | No  |
 | NXCompat_(DEP): | No  |
 | OS_DLL:         | No  |
+#+end_verbatim
 
 
 

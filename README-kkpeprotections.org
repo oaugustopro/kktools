@@ -4,4 +4,4 @@
 kkpeheader.py ~/AppStorage/Security/WindowsDebug/Debug/codeinjection/tftpd32/tftpd32.exe .data
 #+end_src
 
-[[img/2023_11_11-19_25.png]]
+[[img/2023_11_11-19_23.png]]
