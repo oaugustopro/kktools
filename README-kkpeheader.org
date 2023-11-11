@@ -1,0 +1,25 @@
+* KKPEHeader
+
+#+begin_src shell
+kkpeheader.py ~/AppStorage/Security/WindowsDebug/Debug/codeinjection/tftpd32/tftpd32.exe .data
+#+end_src
+#+RESULTS:
+| Before                            | modification: |         |        |                      |
+| Flags                             | for           | section | .data: |                      |
+| IMAGE_SCN_MEM_EXECUTE:            | Not           | Set     |        |                      |
+| IMAGE_SCN_MEM_READ:               | Set           |         |        |                      |
+| IMAGE_SCN_MEM_WRITE:              | Set           |         |        |                      |
+| IMAGE_SCN_CNT_CODE:               | Not           | Set     |        |                      |
+| IMAGE_SCN_CNT_INITIALIZED_DATA:   | Set           |         |        |                      |
+| IMAGE_SCN_CNT_UNINITIALIZED_DATA: | Not           | Set     |        |                      |
+|                                   |               |         |        |                      |
+| After                             | modification: |         |        |                      |
+| Flags                             | for           | section | .data: |                      |
+| IMAGE_SCN_MEM_EXECUTE:            | Set           |         |        |                      |
+| IMAGE_SCN_MEM_READ:               | Set           |         |        |                      |
+| IMAGE_SCN_MEM_WRITE:              | Set           |         |        |                      |
+| IMAGE_SCN_CNT_CODE:               | Set           |         |        |                      |
+| IMAGE_SCN_CNT_INITIALIZED_DATA:   | Set           |         |        |                      |
+| IMAGE_SCN_CNT_UNINITIALIZED_DATA: | Set           |         |        |                      |
+|                                   |               |         |        |                      |
+| Modified                          | binary        | saved   | as:    | modified_tftpd32.exe 

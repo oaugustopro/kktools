@@ -110,6 +110,50 @@ Contain didatical steps to proceed with a buffer overflow attack. It is useful t
 *** KKPattern
 Generate a pattern to find the offset of a buffer overflow (not exautively tested).
 
+*** [[README-kkpeheader.org][KKPEHeader]]
+Change Header Flags of an PE (Portable Executable) file. It can be used to change the flags of a section to make it executable, writable, and readable. It can also be used to change the section to code, initialized data, and uninitialized data.
+
+#+begin_src shell
+kkpeheader.py tftpd32.exe .data
+#+end_src
+
+#+RESULTS:
+| Before                            | modification: |         |        |                      |
+| Flags                             | for           | section | .data: |                      |
+| IMAGE_SCN_MEM_EXECUTE:            | Not           | Set     |        |                      |
+| IMAGE_SCN_MEM_READ:               | Set           |         |        |                      |
+| IMAGE_SCN_MEM_WRITE:              | Set           |         |        |                      |
+| IMAGE_SCN_CNT_CODE:               | Not           | Set     |        |                      |
+| IMAGE_SCN_CNT_INITIALIZED_DATA:   | Set           |         |        |                      |
+| IMAGE_SCN_CNT_UNINITIALIZED_DATA: | Not           | Set     |        |                      |
+|                                   |               |         |        |                      |
+| After                             | modification: |         |        |                      |
+| Flags                             | for           | section | .data: |                      |
+| IMAGE_SCN_MEM_EXECUTE:            | Set           |         |        |                      |
+| IMAGE_SCN_MEM_READ:               | Set           |         |        |                      |
+| IMAGE_SCN_MEM_WRITE:              | Set           |         |        |                      |
+| IMAGE_SCN_CNT_CODE:               | Set           |         |        |                      |
+| IMAGE_SCN_CNT_INITIALIZED_DATA:   | Set           |         |        |                      |
+| IMAGE_SCN_CNT_UNINITIALIZED_DATA: | Set           |         |        |                      |
+|                                   |               |         |        |                      |
+| Modified                          | binary        | saved   | as:    | modified_tftpd32.exe 
+
+*** [[README-kkpeprotections.org][KKPEProtections]]
+Check the protection on PE files. It can be used to check if the file is packed, obfuscated, or protected.
+
+#+begin_src shell :output verbatim
+kkpeprotections.py tftpd32.exe
+#+end_src
+
+#+RESULTS:
+| ASLR:           | No  |
+| SafeSEH:        | Yes |
+| CFG:            | No  |
+| NXCompat_(DEP): | No  |
+| OS_DLL:         | No  |
+
+
+
 ** 🪟 Batch Scripts
 
 *** KKPeas
