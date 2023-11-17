@@ -1,5 +1,5 @@
-* kktools
-[[img/kktools_logo.png]]
+* KKTools
+[[img/kktools-banner-01.png]]
 
 A suite of cybersecurity applications to accelerate and automate processes. Some tools have more educational purposes other than increasing productivity. All tools were written by the author of this repository, dependencies have been minimized to make it easier to use.
 
@@ -17,6 +17,7 @@ Each shell script is a standalone application. They are all written in bash and 
 Most of the scripts can be used in two modes: interactive and automated. The interactive mode is the default mode. The automated mode is activated by passing some argument (depends on the script). The automated mode is useful for scripting and chaining multiple tools together.
 
 *** KKScan
+[[img/kkscan-small.jpeg]]
 Useful for scanning a network for live hosts and open ports. It can also scan for vulnerabilities and exploits in automated mode.
 Based on nmap, nikto, metasploit, smbclient, and other tools.
 
@@ -89,6 +90,7 @@ Resumindo, ssh usuario@servidor (-L se srv no pivo ) iniciotunel:fimtunel
 ** 🪟🐚 Powershell Scripts
 
 *** KKPeas
+[[img/kkpeas-small.jpeg]]
 Like LinPeas but more simple and with just the basic. It is useful to run in the target machine to find vulnerabilities.
 
 Search for unquoted_path, token impersonation and scheduled tasks.
@@ -110,9 +112,13 @@ Contain didatical steps to proceed with a buffer overflow attack. It is useful t
 10. insert_payload
 
 *** KKPattern
+#+attr_html: :width 200px
+[[img/kkpattern-small.jpeg]]
 Generate a pattern to find the offset of a buffer overflow (not exautively tested).
 
 *** [[README-kkpeheader.org][KKPEHeader]]
+#+attr_html: :width 200px
+[[img/kkpeheader-small.jpeg]]
 Change Header Flags of an PE (Portable Executable) file. It can be used to change the flags of a section to make it executable, writable, and readable. It can also be used to change the section to code, initialized data, and uninitialized data.
 
 #+begin_src shell
@@ -142,6 +148,7 @@ kkpeheader.py tftpd32.exe .data
 #+end_src
 
 *** [[README-kkpeprotections.org][KKPEProtections]]
+[[img/kkpeprotections-small.jpeg]]
 Check the protection on PE files. It can be used to check if the file is packed, obfuscated, or protected.
 
 #+begin_src shell :output verbatim
@@ -165,3 +172,6 @@ Like KKPeas Powershell but for cmd only.
 
 *** KKSecurity
 Useful to disable security like windows defender and firewal using cmd only.
+
+* Sponsors
+[[https://glen-handsaw-b4c.notion.site/GCIBER-23-84acc5718a6c4ba28da06133cf17915f][Bizu do Notion do Alemão]]
