@@ -17,6 +17,7 @@ Each shell script is a standalone application. They are all written in bash and 
 Most of the scripts can be used in two modes: interactive and automated. The interactive mode is the default mode. The automated mode is activated by passing some argument (depends on the script). The automated mode is useful for scripting and chaining multiple tools together.
 
 *** KKScan
+[[img/kkscan-small.jpeg]]
 Useful for scanning a network for live hosts and open ports. It can also scan for vulnerabilities and exploits in automated mode.
 Based on nmap, nikto, metasploit, smbclient, and other tools.
 
@@ -89,6 +90,7 @@ Resumindo, ssh usuario@servidor (-L se srv no pivo ) iniciotunel:fimtunel
 ** 🪟🐚 Powershell Scripts
 
 *** KKPeas
+[[img/kkpeas-small.jpeg]]
 Like LinPeas but more simple and with just the basic. It is useful to run in the target machine to find vulnerabilities.
 
 Search for unquoted_path, token impersonation and scheduled tasks.
@@ -111,12 +113,12 @@ Contain didatical steps to proceed with a buffer overflow attack. It is useful t
 
 *** KKPattern
 #+attr_html: :width 200px
-[[img/kkpattern.jpeg]]
+[[img/kkpattern-small.jpeg]]
 Generate a pattern to find the offset of a buffer overflow (not exautively tested).
 
 *** [[README-kkpeheader.org][KKPEHeader]]
 #+attr_html: :width 200px
-[[img/kkpeheader.jpeg]]
+[[img/kkpeheader-small.jpeg]]
 Change Header Flags of an PE (Portable Executable) file. It can be used to change the flags of a section to make it executable, writable, and readable. It can also be used to change the section to code, initialized data, and uninitialized data.
 
 #+begin_src shell
