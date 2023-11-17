@@ -8,7 +8,9 @@ Most of the scripts are fully functional but they lack documentation and some of
 Those tools were used in Cyber Security classes in Brazilian Army courses.
 
 Sponsored by:
+
 [[img/bizi_do_notion-small2.png]]
+
 [[https://glen-handsaw-b4c.notion.site/GCIBER-23-84acc5718a6c4ba28da06133cf17915f][Bizu do Notion do Alemão]]
 
 ** Installation
