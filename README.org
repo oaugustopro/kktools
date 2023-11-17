@@ -172,3 +172,6 @@ Like KKPeas Powershell but for cmd only.
 
 *** KKSecurity
 Useful to disable security like windows defender and firewal using cmd only.
+
+* Sponsors
+[[https://glen-handsaw-b4c.notion.site/GCIBER-23-84acc5718a6c4ba28da06133cf17915f0][Bizu do Notion do Alemão]]
