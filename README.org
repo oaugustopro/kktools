@@ -110,9 +110,13 @@ Contain didatical steps to proceed with a buffer overflow attack. It is useful t
 10. insert_payload
 
 *** KKPattern
+#+attr_html: :width 200px
+[[img/kkpattern.jpeg]]
 Generate a pattern to find the offset of a buffer overflow (not exautively tested).
 
 *** [[README-kkpeheader.org][KKPEHeader]]
+#+attr_html: :width 200px
+[[img/kkpeheader.jpeg]]
 Change Header Flags of an PE (Portable Executable) file. It can be used to change the flags of a section to make it executable, writable, and readable. It can also be used to change the section to code, initialized data, and uninitialized data.
 
 #+begin_src shell
