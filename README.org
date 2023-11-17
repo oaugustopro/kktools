@@ -148,6 +148,7 @@ kkpeheader.py tftpd32.exe .data
 #+end_src
 
 *** [[README-kkpeprotections.org][KKPEProtections]]
+[[img/kkpeprotections-small.jpeg]]
 Check the protection on PE files. It can be used to check if the file is packed, obfuscated, or protected.
 
 #+begin_src shell :output verbatim
